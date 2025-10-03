@@ -4,7 +4,6 @@ import numpy as np
 
 modele_charge = joblib.load("./models/modele_final.pkl")
 
-
 age = int(input("Entrez l'âge : "))
 sex = input("Entrez le sexe (male/female) : ")
 bmi = float(input("Entrez le BMI : "))
@@ -20,6 +19,8 @@ nouvelle_donnee = pd.DataFrame([{
     "smoker": smoker,
     "region": region
 }])
+
+
 
 pred_log = modele_charge.predict(nouvelle_donnee)
 pred = np.expm1(pred_log)
