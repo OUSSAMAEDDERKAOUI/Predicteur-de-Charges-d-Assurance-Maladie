@@ -22,7 +22,10 @@ nouvelle_donnee = pd.DataFrame([{
 
 
 
+
+
 pred_log = modele_charge.predict(nouvelle_donnee)
 pred = np.expm1(pred_log)
 
 print(f"Estimation des charges : {pred[0]:.2f} $")
+
